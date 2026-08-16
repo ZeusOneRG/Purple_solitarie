@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://n8bd3tn4at2s"]
+
+[ext_resource type="Script" uid="uid://50kw0yfprpr1" path="res://scripts/card.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://diawq7pjn87nt" path="res://assets/cards/back_dark.png" id="1_d81rb"]
+
+[node name="Card" type="Control" unique_id=997524419]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1031.0
+offset_bottom = -478.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_6u4wf")
+
+[node name="Visual" type="TextureRect" parent="." unique_id=400836079]
+layout_mode = 0
+offset_right = 121.0
+offset_bottom = 170.0
+texture = ExtResource("1_d81rb")
+expand_mode = 1

@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dbu4xo2bu7dib"]
+
+[ext_resource type="Texture2D" uid="uid://b2vov2v47fyhs" path="res://assets/backgound_cardgame_01.png" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://dispebgoglgby" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://7o5a1lmtpvqb" path="res://assets/menu_button_02.png" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://13hinfm2xphy" path="res://scripts/button.gd" id="3_bqqt6"]
+
+[node name="MainMenu" type="Control" unique_id=501802071]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1953287263]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l6cm7")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=931372702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureButton1" type="TextureButton" parent="TextureRect/VBoxContainer" unique_id=821425077]
+modulate = Color(0.6288185, 0.3063064, 0.5620252, 1)
+custom_maximum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("2_bqqt6")
+stretch_mode = 0
+script = ExtResource("3_bqqt6")
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/TextureButton1" unique_id=1388857587]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "NEW GAME"
+
+[node name="TextureButton2" type="TextureButton" parent="TextureRect/VBoxContainer" unique_id=1327642020]
+modulate = Color(0.6288185, 0.3063064, 0.5620252, 1)
+custom_maximum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("2_bqqt6")
+stretch_mode = 0
+script = ExtResource("3_bqqt6")
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/TextureButton2" unique_id=1453334770]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "SETTINGS"
+
+[node name="TextureButton3" type="TextureButton" parent="TextureRect/VBoxContainer" unique_id=1882705811]
+modulate = Color(0.6288185, 0.3063064, 0.5620252, 1)
+custom_maximum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("2_bqqt6")
+stretch_mode = 0
+script = ExtResource("3_bqqt6")
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/TextureButton3" unique_id=2100027024]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.5
+offset_top = -11.5
+offset_right = 16.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXIT"

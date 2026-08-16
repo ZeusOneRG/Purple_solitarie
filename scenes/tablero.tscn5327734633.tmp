@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cegxpxnqg55dt"]
+
+[ext_resource type="Script" uid="uid://dh7mldjs3nyj" path="res://scripts/tablero.gd" id="1_1fh1m"]
+[ext_resource type="Script" uid="uid://cds775qioh12y" path="res://scripts/card_column.gd" id="2_15a0m"]
+[ext_resource type="Texture2D" uid="uid://diawq7pjn87nt" path="res://assets/cards/back_dark.png" id="3_ee34m"]
+
+[node name="Tablero" type="Control" unique_id=1061334127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1fh1m")
+
+[node name="Game_Columns" type="HBoxContainer" parent="." unique_id=1850597843]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 250.0
+offset_right = 1100.0
+offset_bottom = 750.0
+theme_override_constants/separation = 15
+
+[node name="Card_column1" type="Control" parent="Game_Columns" unique_id=221245694]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column2" type="Control" parent="Game_Columns" unique_id=1224322045]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column3" type="Control" parent="Game_Columns" unique_id=965934494]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column4" type="Control" parent="Game_Columns" unique_id=249872698]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column5" type="Control" parent="Game_Columns" unique_id=227390707]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column6" type="Control" parent="Game_Columns" unique_id=439777192]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column7" type="Control" parent="Game_Columns" unique_id=386921610]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Deck_Container" type="HBoxContainer" parent="." unique_id=251502691]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 350.0
+offset_bottom = 210.0
+theme_override_constants/separation = 20
+
+[node name="Hand_Container" type="TextureButton" parent="Deck_Container" unique_id=903988476]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+texture_normal = ExtResource("3_ee34m")
+
+[node name="Discard_zone" type="Control" parent="Deck_Container" unique_id=1121857841]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2

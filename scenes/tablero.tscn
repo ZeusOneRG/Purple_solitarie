@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://cegxpxnqg55dt"]
+
+[ext_resource type="Script" uid="uid://dh7mldjs3nyj" path="res://scripts/tablero.gd" id="1_1fh1m"]
+[ext_resource type="Texture2D" uid="uid://b2vov2v47fyhs" path="res://assets/backgound_cardgame_01.png" id="2_4sva1"]
+[ext_resource type="Script" uid="uid://cds775qioh12y" path="res://scripts/card_column.gd" id="2_15a0m"]
+[ext_resource type="Texture2D" uid="uid://diawq7pjn87nt" path="res://assets/cards/back_dark.png" id="3_ee34m"]
+[ext_resource type="Script" uid="uid://inwofrlxlur8" path="res://scenes/foundation.gd" id="4_afy4m"]
+[ext_resource type="Texture2D" uid="uid://c0b8weylit2dn" path="res://assets/cards/back_light.png" id="5_wnuxq"]
+
+[node name="Tablero" type="Control" unique_id=1061334127]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_1fh1m")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1494790194]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4sva1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=99665278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -13.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Main_Layout" type="VBoxContainer" parent="MarginContainer" unique_id=491566523]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Top_Bar" type="HBoxContainer" parent="MarginContainer/Main_Layout" unique_id=1176964869]
+layout_mode = 2
+
+[node name="Deck_Container" type="HBoxContainer" parent="MarginContainer/Main_Layout/Top_Bar" unique_id=251502691]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Hand_Container" type="TextureButton" parent="MarginContainer/Main_Layout/Top_Bar/Deck_Container" unique_id=903988476]
+custom_minimum_size = Vector2(121, 170)
+custom_maximum_size = Vector2(121, 170)
+layout_mode = 2
+texture_normal = ExtResource("3_ee34m")
+stretch_mode = 4
+
+[node name="Discard_zone" type="Control" parent="MarginContainer/Main_Layout/Top_Bar/Deck_Container" unique_id=1121857841]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+
+[node name="Foundation_Container" type="HBoxContainer" parent="MarginContainer/Main_Layout/Top_Bar" unique_id=827202089]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Control" type="Control" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container" unique_id=1003924719]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("4_afy4m")
+
+[node name="background" type="TextureRect" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container/Control" unique_id=351102597]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wnuxq")
+expand_mode = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container" unique_id=674200833]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("4_afy4m")
+
+[node name="background" type="TextureRect" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container/Control2" unique_id=1780749356]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wnuxq")
+expand_mode = 1
+
+[node name="Control3" type="Control" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container" unique_id=1041743493]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("4_afy4m")
+
+[node name="background" type="TextureRect" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container/Control3" unique_id=98505650]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wnuxq")
+expand_mode = 1
+
+[node name="Control4" type="Control" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container" unique_id=937152653]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("4_afy4m")
+
+[node name="background" type="TextureRect" parent="MarginContainer/Main_Layout/Top_Bar/Foundation_Container/Control4" unique_id=1229410278]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wnuxq")
+expand_mode = 1
+
+[node name="Game_Columns" type="HBoxContainer" parent="MarginContainer/Main_Layout" unique_id=1850597843]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 25
+
+[node name="Card_column1" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=221245694]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column2" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=1224322045]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column3" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=965934494]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column4" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=249872698]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column5" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=227390707]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column6" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=439777192]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
+
+[node name="Card_column7" type="Control" parent="MarginContainer/Main_Layout/Game_Columns" unique_id=386921610]
+custom_minimum_size = Vector2(121, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_15a0m")
