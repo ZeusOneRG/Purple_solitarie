@@ -1,6 +1,6 @@
-# Licencia de Uso Personal y No Comercial / Personal and Non-Commercial License
+Personal and Non-Commercial License
 
-Copyright (c) 2026 [Tu Nombre o Nombre de Tu Estudio]
+Copyright (c) 2026 Zeus
 
 Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0).
 
